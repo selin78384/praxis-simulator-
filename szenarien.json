@@ -1,0 +1,262 @@
+{
+  "szenarien": [
+    {
+      "id": 1,
+      "titel": "Sicherer Homeoffice-Arbeitsplatz für die Buchhaltung",
+      "lernfelder": ["LF 1", "LF 2", "LF 3", "LF 4"],
+      "kundenfall": "Frau Weber arbeitet in der Buchhaltung eines Handwerksbetriebs und soll ab nächster Woche zwei Tage pro Woche im Homeoffice arbeiten. Sie bearbeitet dort Rechnungen und Lohndaten. Du sollst ihren Heimarbeitsplatz einrichten und sicher an das Firmennetz anbinden.",
+      "schritte": [
+        {
+          "frage": "Frau Weber möchte ihren privaten Laptop für die Arbeit nutzen, auf dem auch ihre Kinder spielen. Was machst du?",
+          "optionen": [
+            {
+              "id": "A",
+              "text": "Du erlaubst den privaten Laptop, weil das Geld für ein Firmengerät spart.",
+              "korrekt": false,
+              "konsequenz": "Die Kinder installieren ein Spiel mit Schadsoftware. Lohndaten sind plötzlich nicht mehr geschützt und die Firma muss den Vorfall melden.",
+              "merksatz": "Zugriffsschutz und Virenschutz gehören zu jedem Arbeitsplatz."
+            },
+            {
+              "id": "B",
+              "text": "Du stellst ein Firmengerät mit Virenschutz bereit, das nur Frau Weber mit eigenem Passwort nutzt.",
+              "korrekt": true,
+              "konsequenz": "Das Gerät ist zentral gewartet und nur für Frau Weber zugänglich. Die Firmendaten bleiben vom privaten Bereich getrennt.",
+              "merksatz": "Zugriffsschutz und Virenschutz gehören zu jedem Arbeitsplatz."
+            },
+            {
+              "id": "C",
+              "text": "Du richtest auf dem privaten Laptop ein zweites Benutzerkonto ohne Passwort ein.",
+              "korrekt": false,
+              "konsequenz": "Jeder im Haushalt kann das Konto öffnen. Der Zugriff auf die Firmendaten ist nicht geschützt.",
+              "merksatz": "Zugriffsschutz und Virenschutz gehören zu jedem Arbeitsplatz."
+            }
+          ]
+        },
+        {
+          "frage": "Wie bindest du das Firmengerät von zu Hause an das Firmennetz an?",
+          "optionen": [
+            {
+              "id": "A",
+              "text": "Du richtest eine VPN-Verbindung ein, die den Datenverkehr verschlüsselt.",
+              "korrekt": true,
+              "konsequenz": "Frau Weber erreicht Dateiserver und Buchhaltungssoftware, ohne dass Dritte im Internet mitlesen können.",
+              "merksatz": "Ein VPN ist eine verschlüsselte Verbindung über ein öffentliches Netz."
+            },
+            {
+              "id": "B",
+              "text": "Du gibst den Dateiserver direkt im Internet frei, damit sie ohne Anmeldung zugreifen kann.",
+              "korrekt": false,
+              "konsequenz": "Der Server ist für jeden erreichbar. Angreifer können Daten lesen oder verändern.",
+              "merksatz": "Schutzziele: Vertraulichkeit, Integrität, Verfügbarkeit (CIA-Triade)."
+            },
+            {
+              "id": "C",
+              "text": "Du schickst ihr die Dateien täglich unverschlüsselt per privater E-Mail.",
+              "korrekt": false,
+              "konsequenz": "Die Mails können unterwegs mitgelesen werden. Die Vertraulichkeit der Lohndaten ist verletzt.",
+              "merksatz": "Maßnahmen sind technisch (Verschlüsselung, Firewall) oder organisatorisch (Richtlinien, Schulungen)."
+            }
+          ]
+        },
+        {
+          "frage": "Frau Weber klagt nach dem ersten Homeoffice-Tag über Rückenschmerzen, weil sie am Küchentisch auf einem Hocker sitzt. Was empfiehlst du?",
+          "optionen": [
+            {
+              "id": "A",
+              "text": "Du sagst, dass sich der Körper schon daran gewöhnt.",
+              "korrekt": false,
+              "konsequenz": "Die Beschwerden nehmen zu und Frau Weber fällt zeitweise aus.",
+              "merksatz": "Ergonomie vermeidet Gesundheitsbelastungen am Arbeitsplatz."
+            },
+            {
+              "id": "B",
+              "text": "Du empfiehlst einen größeren Monitor, damit sie weniger scrollen muss.",
+              "korrekt": false,
+              "konsequenz": "Der Monitor hilft beim Lesen, ändert aber nichts an der schlechten Sitzhaltung. Die Rückenschmerzen bleiben.",
+              "merksatz": "Ergonomie vermeidet Gesundheitsbelastungen am Arbeitsplatz."
+            },
+            {
+              "id": "C",
+              "text": "Du empfiehlst einen höhenverstellbaren Bürostuhl und Tisch sowie die Abstimmung mit dem Arbeitsschutz.",
+              "korrekt": true,
+              "konsequenz": "Frau Weber sitzt gesünder, die Beschwerden gehen zurück. Der Betrieb erfüllt seine Fürsorge für die Beschäftigten.",
+              "merksatz": "Arbeitsschutz dient der Gesundheit der Beschäftigten."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "titel": "Neuer Arbeitsplatz in der Arztpraxis ohne Internet",
+      "lernfelder": ["LF 2", "LF 3", "LF 4"],
+      "kundenfall": "In einer kleinen Arztpraxis wurde ein neuer PC am Empfang aufgestellt. Die Mitarbeiterin meldet, dass sie keine Internetseiten öffnen kann. Der Drucker und der Praxisserver sind aber erreichbar. Auf dem PC liegen Patientendaten.",
+      "schritte": [
+        {
+          "frage": "Du prüfst zuerst den Client. Er hat die Adresse 169.254.12.7. Was schließt du daraus?",
+          "optionen": [
+            {
+              "id": "A",
+              "text": "Der Client hat vom DHCP-Server keine Adresse bekommen und sich selbst eine zugewiesen.",
+              "korrekt": true,
+              "konsequenz": "Du prüfst Netzwerkkabel und DHCP-Dienst. Nach der Erneuerung erhält der PC eine gültige Adresse.",
+              "merksatz": "DHCP vergibt IP-Adressen automatisch, DNS löst Namen in IP-Adressen auf."
+            },
+            {
+              "id": "B",
+              "text": "Der RAM des PCs ist defekt.",
+              "korrekt": false,
+              "konsequenz": "Du tauschst unnötig Hardware aus. Das Netzwerkproblem bleibt bestehen.",
+              "merksatz": "Die CPU führt Befehle aus, der RAM ist flüchtig, SSD/HDD speichern dauerhaft."
+            },
+            {
+              "id": "C",
+              "text": "Die MAC-Adresse muss manuell geändert werden.",
+              "korrekt": false,
+              "konsequenz": "Die MAC-Adresse ist fest vergeben und löst das Problem nicht. Du verlierst Zeit.",
+              "merksatz": "Die MAC-Adresse ist die physische Adresse, die IP-Adresse die logische."
+            }
+          ]
+        },
+        {
+          "frage": "Der PC hat jetzt eine gültige Adresse und erreicht per IP-Adresse das Internet, aber Webseitennamen funktionieren nicht. Woran liegt es wahrscheinlich?",
+          "optionen": [
+            {
+              "id": "A",
+              "text": "Der Drucker ist zu weit entfernt.",
+              "korrekt": false,
+              "konsequenz": "Der Drucker hat mit der Namensauflösung nichts zu tun. Du suchst an der falschen Stelle.",
+              "merksatz": "Netzwerke dienen dem gemeinsamen Nutzen von Dateien, Druckern, Internet."
+            },
+            {
+              "id": "B",
+              "text": "Die Festplatte ist zu klein.",
+              "korrekt": false,
+              "konsequenz": "Der Speicherplatz hat keinen Einfluss auf die Namensauflösung. Das Problem besteht weiter.",
+              "merksatz": "Die CPU führt Befehle aus, der RAM ist flüchtig, SSD/HDD speichern dauerhaft."
+            },
+            {
+              "id": "C",
+              "text": "Der DNS-Server ist am Client nicht oder falsch eingetragen.",
+              "korrekt": true,
+              "konsequenz": "Du trägst den richtigen DNS-Server ein. Webseitennamen werden wieder in IP-Adressen aufgelöst.",
+              "merksatz": "DHCP vergibt IP-Adressen automatisch, DNS löst Namen in IP-Adressen auf."
+            }
+          ]
+        },
+        {
+          "frage": "Auf dem PC liegen Patientendaten. Welchen Schutzbedarf stufst du für Vertraulichkeit ein und was tust du?",
+          "optionen": [
+            {
+              "id": "A",
+              "text": "Normal, weil es nur ein Empfangs-PC ist. Du richtest keine weiteren Maßnahmen ein.",
+              "korrekt": false,
+              "konsequenz": "Ein Besucher könnte am unbeaufsichtigten PC Patientendaten einsehen. Die Praxis verletzt die Vertraulichkeit.",
+              "merksatz": "Der Schutzbedarf wird eingestuft: normal, hoch, sehr hoch."
+            },
+            {
+              "id": "B",
+              "text": "Hoch bis sehr hoch. Du richtest Passwort, Bildschirmsperre und Virenschutz ein.",
+              "korrekt": true,
+              "konsequenz": "Patientendaten sind vor Einsicht und Schadsoftware besser geschützt. Die Praxis erfüllt ihre Pflichten im Umgang mit sensiblen Daten.",
+              "merksatz": "Zugriffsschutz und Virenschutz gehören zu jedem Arbeitsplatz."
+            },
+            {
+              "id": "C",
+              "text": "Sehr hoch, aber du lässt das Passwort auf einem Zettel am Monitor kleben, damit niemand es vergisst.",
+              "korrekt": false,
+              "konsequenz": "Jeder am Empfang kann das Passwort lesen. Der Zugriffsschutz ist wirkungslos.",
+              "merksatz": "Maßnahmen sind technisch (Verschlüsselung, Firewall) oder organisatorisch (Richtlinien, Schulungen)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "titel": "Verdächtiger Anruf und ein USB-Stick im Büro",
+      "lernfelder": ["LF 1", "LF 2", "LF 4"],
+      "kundenfall": "Du bist Azubi in einem IT-Systemhaus. Ein Anrufer gibt sich als Mitarbeiter eines Kunden aus und bittet dringend um das Passwort für den Fernzugang. Am nächsten Tag liegt auf dem Parkplatz ein USB-Stick mit der Aufschrift „Gehälter 2026“. Ein Kollege möchte ihn sofort anschließen. Außerdem soll ein altes Kundengerät entsorgt werden.",
+      "schritte": [
+        {
+          "frage": "Der Anrufer übt Zeitdruck aus und verlangt das Passwort sofort. Was machst du?",
+          "optionen": [
+            {
+              "id": "A",
+              "text": "Du gibst das Passwort heraus, weil er sehr freundlich klingt.",
+              "korrekt": false,
+              "konsequenz": "Der Anrufer war ein Angreifer und erhält Zugriff auf das Kundensystem. Es entsteht ein großer Schaden.",
+              "merksatz": "Social Engineering nutzt den Menschen als Schwachstelle."
+            },
+            {
+              "id": "B",
+              "text": "Du nennst nur die ersten Zeichen des Passworts, den Rest später.",
+              "korrekt": false,
+              "konsequenz": "Auch Teile des Passworts erleichtern einen Angriff. Die Sicherheit ist geschwächt.",
+              "merksatz": "Social Engineering nutzt den Menschen als Schwachstelle."
+            },
+            {
+              "id": "C",
+              "text": "Du gibst keine Daten heraus, bietest einen Rückruf über die bekannte Nummer an und meldest den Vorfall deinem Ausbilder.",
+              "korrekt": true,
+              "konsequenz": "Der Betrugsversuch fällt auf, es entsteht kein Schaden. Das Team wird gewarnt.",
+              "merksatz": "Maßnahmen sind technisch (Verschlüsselung, Firewall) oder organisatorisch (Richtlinien, Schulungen)."
+            }
+          ]
+        },
+        {
+          "frage": "Dein Kollege will den gefundenen USB-Stick am Arbeitsrechner anschließen, um den Besitzer herauszufinden. Was sagst du?",
+          "optionen": [
+            {
+              "id": "A",
+              "text": "Nicht anschließen, sondern dem IT-Sicherheitsverantwortlichen übergeben und nur in einer geprüften Umgebung untersuchen lassen.",
+              "korrekt": true,
+              "konsequenz": "Mögliche Schadsoftware gelangt nicht ins Firmennetz. Der Stick wird sicher geprüft.",
+              "merksatz": "Mobile Datenträger sind ein Risiko und sollten geprüft/verschlüsselt werden."
+            },
+            {
+              "id": "B",
+              "text": "Anschließen ist in Ordnung, der Virenschutz wird es schon richten.",
+              "korrekt": false,
+              "konsequenz": "Der Stick enthält Schadsoftware, die sich im Netzwerk ausbreitet. Mehrere Rechner fallen aus.",
+              "merksatz": "Mobile Datenträger sind ein Risiko und sollten geprüft/verschlüsselt werden."
+            },
+            {
+              "id": "C",
+              "text": "Du steckst den Stick zuerst in deinen privaten Laptop, weil der nicht zur Firma gehört.",
+              "korrekt": false,
+              "konsequenz": "Dein privater Laptop wird infiziert. Beim Verbinden mit dem Firmennetz gelangt die Schadsoftware doch dorthin.",
+              "merksatz": "Mobile Datenträger sind ein Risiko und sollten geprüft/verschlüsselt werden."
+            }
+          ]
+        },
+        {
+          "frage": "Das alte Kundengerät mit defekter Festplatte soll entsorgt werden. Wie gehst du vor?",
+          "optionen": [
+            {
+              "id": "A",
+              "text": "Du wirfst es in den normalen Hausmüll.",
+              "korrekt": false,
+              "konsequenz": "Schadstoffe gelangen in die Umwelt und Kundendaten könnten ausgelesen werden.",
+              "merksatz": "Umweltschutz im Betrieb: Elektroschrott richtig entsorgen, Energie sparen."
+            },
+            {
+              "id": "B",
+              "text": "Du gibst es über die Elektroschrott-Sammlung ab, nachdem die Daten sicher gelöscht oder der Datenträger zerstört wurde.",
+              "korrekt": true,
+              "konsequenz": "Das Gerät wird umweltgerecht entsorgt und die Kundendaten bleiben vertraulich.",
+              "merksatz": "Umweltschutz im Betrieb: Elektroschrott richtig entsorgen, Energie sparen."
+            },
+            {
+              "id": "C",
+              "text": "Du nimmst es mit nach Hause und verkaufst es privat weiter.",
+              "korrekt": false,
+              "konsequenz": "Der Käufer kann Kundendaten von der Festplatte auslesen. Das verletzt die Vertraulichkeit und Pflichten gegenüber dem Betrieb.",
+              "merksatz": "Auszubildende haben Rechte und Pflichten (Ausbildungsvertrag, Berufsbildungsgesetz)."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
